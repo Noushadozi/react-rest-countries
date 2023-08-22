@@ -13,7 +13,7 @@ const Countries = () => {
     return (
         <div>
             <h1>Welcome To React Rest Countries</h1>
-            <h2>{countries.length} countries are listed here</h2>
+            <h2 className='number-of-countries'>{countries.length} countries are listed here</h2>
             {
                 countries.map(country =>
                     <Country
@@ -23,7 +23,6 @@ const Countries = () => {
                         area={country.area}
                         population={country.population}
                         maps={country.maps.googleMaps}
-                        // capitals={props.capital}
                     ></Country>)
             }
         </div>
