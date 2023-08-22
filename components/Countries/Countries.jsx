@@ -14,17 +14,15 @@ const Countries = () => {
         <div>
             <h1>Welcome To React Rest Countries</h1>
             <h2 className='number-of-countries'>{countries.length} countries are listed here</h2>
-            {
-                countries.map(country =>
-                    <Country
-                        flags={country.flags.png}
-                        name={country.name.common}
-                        region={country.region}
-                        area={country.area}
-                        population={country.population}
-                        maps={country.maps.googleMaps}
-                    ></Country>)
-            }
+            <div className='countries'>
+                {
+                    countries.map(country =>
+                        <Country
+                            country={country}
+                            key={country.cca3}
+                        ></Country>)
+                }
+            </div>
         </div>
     );
 };
