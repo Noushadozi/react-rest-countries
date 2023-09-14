@@ -1,5 +1,5 @@
 * {
-    color: lightblue;
+    color: #8EC3B0;
 }
 
 .number-of-countries {
@@ -7,7 +7,8 @@
 }
 
 .visited-title{
-    color: palegreen;
+    color: #FFACC7;
+    font-weight: 900;
 }
 
 .visited-img{

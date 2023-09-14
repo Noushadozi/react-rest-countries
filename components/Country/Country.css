@@ -1,8 +1,11 @@
 .country{
     border-radius: 8px;
-    border: 8px solid rebeccapurple;
+    border: 8px solid #8EC3B0;
     margin: 20px;
     padding: 15px;
+}
+.visited-country{
+    background-color: #F8EDE3;
 }
 button{
     margin-left: 40px;

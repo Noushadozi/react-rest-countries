@@ -9,7 +9,7 @@ const Country = ({ country, showVisitedCountries }) => {
         showVisitedCountries(country);
     }
     return (
-        <div className='country'>
+        <div className={`country ${visitedCountry && 'visited-country'}`}>
             <img src={flags.png} alt="" />
             <h3>{name.common}</h3>
             <p>Region: {region}</p>
