@@ -1,4 +1,4 @@
-import Countries from '../components/Countries/Countries'
+import Countries from './components/Countries/Countries'
 import './App.css'
 
 function App() {
