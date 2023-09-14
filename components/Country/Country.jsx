@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Country.css';
 
-const Country = (props) => {
-    const {flags, name, region, area, population, maps} = props.country;
-    // console.log(props);
+const Country = ({ country, showVisitedCountries }) => {
+    const { flags, name, region, area, population, maps } = country;
+    const [visitedCountry, setVisitedCountry] = useState(false);
+    const handleVisitingCountry = (country) => {
+        setVisitedCountry(true);
+        showVisitedCountries(country);
+    }
     return (
         <div className='country'>
             <img src={flags.png} alt="" />
@@ -12,6 +16,12 @@ const Country = (props) => {
             <p>Area: {area}</p>
             <p>Population: {population}</p>
             <a href={maps.googleMaps} target="_blank" >Map</a>
+            {
+                visitedCountry || <button onClick={() => handleVisitingCountry(country)}>Visited</button>
+            }
+            {
+                visitedCountry && <p>I have visited the country 🥳 </p>
+            }
         </div>
     );
 };
